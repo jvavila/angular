@@ -24,13 +24,16 @@
 			<th>number</th>
 			<th>status</th>
 			<th>cod</th>
+			
 		</tr>
 	</thead>
 	<tbody>
 		<tr ng-repeat="dado in dados">
 			<td>{{dado.status}}</td>
 			<td>{{dado.number}}</td>
-			<td>{{dado.cod}}</td>
+			<td>{{dado.cod}}
+				<span ng-repeat="member in dado.members">{{member}}</span>
+			</td>
 		</tr>		
 	</tbody>
 </table>
